@@ -1,0 +1,4 @@
+ibw_koperasi:
+    resource: "@IbwKoperasiBundle/Resources/config/routing.yml"
+    prefix:   /
+

@@ -1,0 +1,16 @@
+ibw_koperasi_homepage:
+    pattern:  /
+    defaults: { _controller: IbwKoperasiBundle:Job:index }
+
+IbwKoperasiBundle_job:
+    resource: "@IbwKoperasiBundle/Resources/config/routing/job.yml"
+    prefix:   /job
+
+IbwKoperasiBundle_category:
+    pattern:  /category/{slug}
+    defaults: { _controller: IbwKoperasiBundle:Category:show }
+
+IbwKoperasiBundle_category:
+    pattern: /category/{slug}/{page}
+    defaults: { _controller: IbwKoperasiBundle:Category:show, page: 1 }
+

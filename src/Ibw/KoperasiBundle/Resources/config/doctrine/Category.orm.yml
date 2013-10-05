@@ -1,0 +1,30 @@
+Ibw\KoperasiBundle\Entity\Category:
+    type: entity
+    repositoryClass: Ibw\KoperasiBundle\Repository\CategoryRepository
+    table: category
+    id:
+        id:
+            type: integer
+            generator: { strategy: AUTO }
+    fields:
+        name:
+            type: string
+            length: 255
+            unique: true
+#------------- Tambah SLUG
+        slug:
+            type: string
+            length: 255
+            unique: true
+    oneToMany:
+        jobs:
+            targetEntity: Job
+            mappedBy: category
+    manyToMany:
+        affiliates:
+            targetEntity: Affiliate
+            mappedBy: categories
+# Set slug
+    lifecycleCallbacks:
+        prePersist: [ setSlugValue ]
+        preUpdate: [ setSlugValue ]

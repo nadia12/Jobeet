@@ -1,0 +1,7 @@
+parameters:
+#    ibw_koperasi.example.class: Ibw\KoperasiBundle\Example
+
+services:
+#    ibw_koperasi.example:
+#        class: %ibw_koperasi.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]
